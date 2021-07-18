@@ -1,8 +1,8 @@
-<h1>{{title}}</h1>
-<div>
+<h1>{{appName}}</h1>
+<div >
   <ul>
     <li *ngFor="let quote of quotes">
-    <div card>
+    <div class=holder>
     {{quote.say}}<br>
     <button>Upvote</button>  <button>Down vote</button> {{quote.postTime}} by {{quote.userName}}
     </div>
