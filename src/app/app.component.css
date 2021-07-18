@@ -1,4 +1,7 @@
 button{margin-left:10px;}
+.holder{
+    min-height:100px;min-width:400px;background-color: grey !important;
+}
 ul li{
     list-style-type: none;
 }
