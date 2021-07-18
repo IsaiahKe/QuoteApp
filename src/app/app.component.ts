@@ -7,6 +7,16 @@ import { Quote } from './quote';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'QuoteApp';
-  quotes:Quote[]=[new Quote(3,4,"fake ituntil you make it",new Date(2021,7,16),"martin Luther","Morara")]
+  appName = 'QuoteApp';
+  quotes:Quote[]=[new Quote(0,0,"fake it until you make it",new Date(2021,7,16),"martin Luther","Morara")]
+  constructor(){}
+  
+  deleteQuote(index:any){
+    this.quotes.splice(index,1);
+  }
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    
+  }
 }
