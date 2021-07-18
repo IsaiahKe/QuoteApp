@@ -7,7 +7,11 @@
     <div *ngIf='quote.showDetails'>
       <app-quote-detail [quote]='quote'></app-quote-detail>
     </div>
-    <button >Upvote</button>  <button>Down vote</button> <button (click)='deleteQuote(i)'>Delete</button>
+    
+    <button (click)='toggleQuote(i)'> More</button>
+   <p>
+    Upvotes <span>{{quote.upVote}}</span> Downvotes <span> {{quote.downVote}}</span> 
+    </p>
     </div>
 </li>
   </ul>
