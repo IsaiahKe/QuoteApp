@@ -1,10 +1,12 @@
 <h1>{{appName}}</h1>
 <div >
   <ul>
-    <li *ngFor="let quote of quotes">
+    <li *ngFor='let quote of quotes; let i=index'>
     <div class=holder>
     {{quote.say}}<br>
-    <button>Upvote</button>  <button>Down vote</button> {{quote.postTime}} by {{quote.userName}}
+    <div *ngIf='quote.showDetails'>
+      <app-quote-detail [quote]='quote'></app-quote-detail>
+    </div>
     </div>
 </li>
   </ul>
