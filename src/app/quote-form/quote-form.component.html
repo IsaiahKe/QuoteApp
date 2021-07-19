@@ -1,11 +1,13 @@
-<form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
-<p><label for="say">Quote:</label><br>
-<textarea required cols=50 rows=10 id="say" [(ngModel)]='newQuote.say' name="say " ></textarea></p>
-<p><label for="quote">Author</label><br>
-<input type="text" required id="author" [(ngModel)]='newQuote.author' name="author" ></p>
-<p><label for="user">UserName</label><br>
-<input type="text" required id="user" [(ngModel)]='newQuote.userName' name="user" ></p>
-<p>
-<button type="submit">Add quote</button>
-</p>
-</form>
+<mat-card class="fholder">
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+        <p><label for="say">Quote:</label><br>
+        <textarea required cols=70 rows=10 id="say" [(ngModel)]='newQuote.say' name="say " ></textarea></p>
+        <p><label for="quote">Author</label>
+        <input type="text" required id="author" [(ngModel)]='newQuote.author' name="author" >
+        <label for="user">UserName</label>
+        <input type="text" required id="user" [(ngModel)]='newQuote.userName' name="user" >
+        <p>
+        <button type="submit">Add quote</button>
+        </p>
+        </form>
+</mat-card>

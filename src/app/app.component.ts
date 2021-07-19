@@ -9,6 +9,7 @@ import { Quote } from './quote';
 export class AppComponent {
   appName = 'QuoteApp';
   title='QuoteApp';
+  color='light-blue';
   quotes:Quote[]=[new Quote(1,0,0,"fake it until you make it",new Date(2021,7,16),"martin Luther","Morara")]
   constructor(){}
   toggleQuote(index:any){
@@ -30,12 +31,15 @@ export class AppComponent {
     
   }
   addVote(index:any){
-    this.quotes[index].upVote+1;
+    this.quotes[index].upVote++;
   }
-  reducevote(index:any){
-    this.quotes[index].downVote+1
+  reduceVote(index:any){
+    this.quotes[index].downVote++
   }
- 
+ getHighest(index:any){
+   Math.max(this.quotes[index].upVote);
+   
+ }
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.

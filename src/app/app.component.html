@@ -1,22 +1,21 @@
-<h1>{{appName}}
 
-</h1><app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-
-<div >
+<h1>{{appName}}</h1>
+<mat-card class="body" >
+  <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   <ul *ngFor='let quote of quotes;let i=index'>
-    <div class=holder>
+    <mat-card class="holder">
     {{quote.say}}<br>
     <div *ngIf='quote.showDetails'>
       <app-quote-detail [quote]='quote'></app-quote-detail>
     </div>
     
-    <button (click)='toggleQuote(i)'> More</button>
-    <button (click)='deleteQuote(i)'>Delete</button>
+    <button  mat-button color="accent" (click)='toggleQuote(i)'> More</button>
+    <button  mat-mini-fab color="warn" (click)='deleteQuote(i)'><mat-icon>delete</mat-icon></button>
    <p>
-    <button (click)='addVote(i)'>Likes</button>{{quote.upVote}} <br><br>
-    <button (click)='addVote(i)'>Dislikes</button> {{quote.downVote}}
+    <button mat-button color="primary"(click)='addVote(i)'>Likes</button>{{quote.upVote}} <br><br>
+    <button mat-button color="warn" (click)='reduceVote(i)'>Dislikes</button> {{quote.downVote}}
     </p>
-    </div>
+    </mat-card>
   </ul>
   
-</div>
+</mat-card>

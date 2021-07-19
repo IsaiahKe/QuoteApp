@@ -8,6 +8,9 @@ import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { FormsModule } from '@angular/forms';
 import { TimePipePipe } from './time-pipe.pipe';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { Material } from './material';
+import { HightlightDirective } from './hightlight.directive';
 
 @NgModule({
   declarations: [
@@ -16,12 +19,15 @@ import { TimePipePipe } from './time-pipe.pipe';
     QuoteDetailComponent,
     QuoteFormComponent,
     TimePipePipe,
+    HightlightDirective,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NoopAnimationsModule,
+    Material
   ],
   providers: [],
   bootstrap: [AppComponent]

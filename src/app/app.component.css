@@ -1,7 +1,10 @@
 button{margin-left:10px;}
 .holder{
-    min-height:100px;min-width:fit-content;background-color: grey !important; max-width:600px;
+    min-height:100px;width:80%;margin:0px auto;
 }
 ul li{
     list-style-type: none;
+}
+.body{
+    margin:0px auto;
 }
