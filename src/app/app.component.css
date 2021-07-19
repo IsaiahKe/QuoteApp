@@ -1,6 +1,6 @@
 button{margin-left:10px;}
 .holder{
-    min-height:100px;min-width:400px;background-color: grey !important;
+    min-height:100px;min-width:fit-content;background-color: grey !important; max-width:600px;
 }
 ul li{
     list-style-type: none;

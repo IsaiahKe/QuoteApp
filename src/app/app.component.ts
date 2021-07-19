@@ -19,11 +19,23 @@ export class AppComponent {
     this.quotes.splice(index,1);
   }
   addNewQuote(quote:Quote){
-    const quoteLength=this.quotes.length;
-    quote.id=quoteLength +1;
-    quote.postTime=new Date(quote.postTime);
-    this.quotes.push(quote);
+
+    let id=this.quotes.length+1
+    this.quotes.push(
+      new Quote(id,0,0,quote.say,new Date(),quote.author,quote.userName)
+    );
+    quote.author='';
+    quote.say=''
+    quote.userName='';
+    
   }
+  addVote(index:any){
+    this.quotes[index].upVote+1;
+  }
+  reducevote(index:any){
+    this.quotes[index].downVote+1
+  }
+ 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
